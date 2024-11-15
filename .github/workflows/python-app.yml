@@ -31,7 +31,7 @@ jobs:
         python-version: "3.13"
     - name: Run tests
       run: |
-        python -m unittest tests.py
+        python -m unittest discover -s . -p "tests.py
     - name: Lint code with flake8
       run: |
         pip install flake8
