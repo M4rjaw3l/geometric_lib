@@ -9,8 +9,6 @@ on:
   pull_request:
     branches: [ "main" , "develop" , "release/*"]
 
-permissions:
-  contents: read
 
 jobs:
   build:
@@ -28,7 +26,7 @@ jobs:
         echo "$FULL_NAME"
         echo "$GROUP"
         echo "$GITHUB_ACTOR"
-    - uses: actions/checkout@v4
+ 
     - name: Set up Python 3.13
       uses: actions/setup-python@v4
       with:
