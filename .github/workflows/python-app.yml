@@ -35,8 +35,8 @@ jobs:
    
     - name: Run tests
       run: |
-        python -m unittest discover tests
+        python Testcalculate.py
     - name: Lint code with flake8
-      run: |
+      run: 
         pip install flake8
           flake8 .
