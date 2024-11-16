@@ -32,7 +32,7 @@ jobs:
         
     - name: Run tests
       run: |
-        python ./Testcalculate.py
+        python -m unittest discover test
         
     - name: Lint code with flake8
       run: |
