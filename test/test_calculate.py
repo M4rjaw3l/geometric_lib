@@ -1,15 +1,18 @@
 import sys
 import os
+sys.path.insert(0,
+                os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+if True:
+    import sys
+    import os
+    import unittest
+    from calculate import calc
+    import circle
+    import square
+    from io import StringIO
+    import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-import unittest
-from calculate import calc
-import circle
-import square
-from io import StringIO
-import sys
 
 class TestCalculate(unittest.TestCase):
     def setUp(self):
@@ -22,33 +25,31 @@ class TestCalculate(unittest.TestCase):
     def test_circle_area(self):
         size = [5]
         expected_output = "area of circle is 78.53981633974483\n"
-        calc('circle', 'area', size)
+        calc("circle", "area", size)
         output = sys.stdout.getvalue()
         self.assertEqual(output, expected_output)
 
     def test_circle_perimeter(self):
         size = [5]
         expected_output = "perimeter of circle is 31.41592653589793\n"
-        calc('circle', 'perimeter', size)
+        calc("circle", "perimeter", size)
         output = sys.stdout.getvalue()
         self.assertEqual(output, expected_output)
 
     def test_square_area(self):
         size = [4]
         expected_output = "area of square is 16\n"
-        calc('square', 'area', size)
+        calc("square", "area", size)
         output = sys.stdout.getvalue()
         self.assertEqual(output, expected_output)
 
     def test_square_perimeter(self):
         size = [4]
         expected_output = "perimeter of square is 16\n"
-        calc('square', 'perimeter', size)
+        calc("square", "perimeter", size)
         output = sys.stdout.getvalue()
         self.assertEqual(output, expected_output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
-
-
-
