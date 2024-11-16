@@ -8,8 +8,6 @@ if True:
     import os
     import unittest
     from calculate import calc
-    import circle
-    import square
     from io import StringIO
     import sys
 
